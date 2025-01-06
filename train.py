@@ -8,8 +8,8 @@ import numpy as np
 
 
 # load the training data using pandas
-train_data = pd.read_csv('house-prices-advanced-regression-techniques\\train.csv')
-test_data = pd.read_csv('house-prices-advanced-regression-techniques\\test.csv')
+train_data = pd.read_csv('project_01\\house-prices-advanced-regression-techniques\\train.csv')
+test_data = pd.read_csv('project_01\\house-prices-advanced-regression-techniques\\test.csv')
 
 # select relevant features and target variable(square footage, number of bedrooms, number of bathrooms)
 features = ['Id','GrLivArea', 'BedroomAbvGr', 'FullBath']
@@ -66,4 +66,4 @@ results['Id']= test_data.loc[X_test.index, 'Id']
 submission = results[['Id', 'Predicted Price']]
 
 # Save the submission to a CSV file
-submission.to_csv('house-prices-advanced-regression-techniques\\submission.csv', index=False)
+submission.to_csv('project_01\\house-prices-advanced-regression-techniques\\submission.csv', index=False)
